@@ -64,3 +64,14 @@
 {"context":"NestApplication","level":"info","message":"Nest application successfully started","time":"2024-07-01 17:59:06","timestamp":"2024-07-01T09:59:06.799Z"}
 {"level":"info","message":"成功","time":"2024-07-01 17:59:11","timestamp":"2024-07-01T09:59:11.264Z"}
 {"context":"222","level":"info","message":" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n    Request original url: /demo/1\n    Method: GET\n    IP: ::ffff:127.0.0.1\n    Status code: 500\n    Response: TypeError: this.logger.info is not a function \n  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n    ","time":"2024-07-01 17:59:11","timestamp":"2024-07-01T09:59:11.269Z"}
+{"context":"RoutesResolver","level":"info","message":"AppController {/}:","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.619Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/, GET} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.623Z"}
+{"context":"RoutesResolver","level":"info","message":"DemoController {/demo}:","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.623Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/demo, POST} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.624Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/demo, GET} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.625Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/demo/:id, GET} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.626Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/demo/:id, PATCH} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.627Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/demo/:id, DELETE} route","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.627Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","time":"2024-07-01 18:00:33","timestamp":"2024-07-01T10:00:33.630Z"}
+{"level":"info","message":"成功","time":"2024-07-01 18:00:35","timestamp":"2024-07-01T10:00:35.582Z"}
+{"level":"info","message":" <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n    Request original url: /demo/1\n    Method: GET\n    IP: ::ffff:127.0.0.1\n    Status code: 500\n    Response: TypeError: this.logger.info is not a function \n  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n    ","time":"2024-07-01 18:00:35","timestamp":"2024-07-01T10:00:35.587Z"}
