@@ -1,0 +1,11 @@
+export declare const CAPTCHA_IMG_KEY = "captcha:img";
+export declare const USER_VERSION_KEY = "admin:user:version";
+export declare const USER_TOKEN_KEY = "admin:user:token";
+export declare const USER_USERNAME_KEY = "admin:userName:token";
+export declare const USER_NICKNAME_KEY = "admin:nickName:token";
+export declare const USER_DEPTID_KEY = "admin:deptId:token";
+export declare const USER_DEPTNAME_KEY = "admin:deptName:token";
+export declare const USER_PERMISSIONS_KEY = "admin:permissions:token";
+export declare const USER_ROLEKEYS_KEY = "admin:roleKeys:token";
+export declare const USER_ROLEKS_KEY = "admin:role:token";
+export declare const USER_ONLINE_KEY = "admin:online:token";
