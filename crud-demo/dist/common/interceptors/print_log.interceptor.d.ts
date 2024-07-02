@@ -1,6 +1,5 @@
 import { CallHandler, ExecutionContext, NestInterceptor } from '@nestjs/common';
 import { Observable } from 'rxjs';
-export declare class TransformInterceptor implements NestInterceptor {
-    private logger;
+export declare class PrintLogInterceptor implements NestInterceptor {
     intercept(context: ExecutionContext, next: CallHandler): Observable<any>;
 }

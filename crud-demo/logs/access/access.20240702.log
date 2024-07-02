@@ -1,0 +1,92 @@
+[2024-07-02T09:13:55.343] [INFO] http - print_log.interceptor.ts(line: 26, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:19:14.354] [INFO] http - print_log.interceptor.ts(line: 26, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:19:48.422] [INFO] http - print_log.interceptor.ts(line: 27, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:20:06.288] [INFO] http - print_log.interceptor.ts(line: 27, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {"name":"1"}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:21:23.384] [INFO] http - print_log.interceptor.ts(line: 27, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:21:50.554] [INFO] http - print_log.interceptor.ts(line: 27, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {"name":"1"}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:22:56.689] [INFO] http - print_log.interceptor.ts(line: 27, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:23:52.840] [INFO] http - print_log.interceptor.ts(line: 29, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {}
+    query: {}
+    params: {"id":"1"}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2024-07-02T09:24:12.230] [INFO] http - print_log.interceptor.ts(line: 29, column: 16): 
+  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    Request original url: /demo/1
+    Method: GET
+    IP: ::ffff:127.0.0.1
+    User: undefined
+    Response data:
+ {"data":[{"id":1,"name":"张三"},{"id":2,"name":"李四"}]}
+    body: {"name":"1"}
+    query: {}
+    params: {"id":"1"}
+    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

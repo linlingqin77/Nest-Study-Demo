@@ -105,7 +105,7 @@ SharedModule = __decorate([
             },
             {
                 provide: core_1.APP_INTERCEPTOR,
-                useClass: print_log_interceptor_1.TransformInterceptor,
+                useClass: print_log_interceptor_1.PrintLogInterceptor,
             },
         ],
         exports: [shared_service_1.SharedService],

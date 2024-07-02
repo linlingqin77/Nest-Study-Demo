@@ -14,7 +14,7 @@ import { WinstonModule } from 'src/modules/winston/winston.module';
 import { transports, format } from 'winston';
 import * as chalk from 'chalk';
 // 日志收集
-import { TransformInterceptor } from 'src/common/interceptors/print_log.interceptor';
+import { PrintLogInterceptor } from 'src/common/interceptors/print_log.interceptor';
 @Global()
 @Module({
   imports: [
@@ -111,7 +111,7 @@ import { TransformInterceptor } from 'src/common/interceptors/print_log.intercep
     // 日志收集
     {
       provide: APP_INTERCEPTOR,
-      useClass: TransformInterceptor,
+      useClass: PrintLogInterceptor,
     },
   ],
   exports: [SharedService],
