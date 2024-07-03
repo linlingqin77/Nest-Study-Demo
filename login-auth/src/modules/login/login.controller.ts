@@ -1,13 +1,11 @@
-/*
-https://docs.nestjs.com/controllers#controllers
-*/
-
-import { Controller, Post } from '@nestjs/common';
-
+import { Body, Controller, Post, Req } from '@nestjs/common';
+import { LoginService } from './login.service';
+import { ReqLoginDto } from './dto/req-login.dto';
 @Controller()
 export class LoginController {
+  constructor(private readonly loginService: LoginService) {}
   @Post()
-  login() {
-    return 'login';
+  async login(@Req() req: Request, @Body() body: ReqLoginDto) {
+    return await this.loginService.login(req);
   }
 }
