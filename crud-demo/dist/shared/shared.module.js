@@ -18,9 +18,6 @@ const core_1 = require("@nestjs/core");
 const all_exception_filter_1 = require("../common/filters/all-exception.filter");
 const throttler_1 = require("@nestjs/throttler");
 const res_transform_interceptor_1 = require("../common/interceptors/res_transform.interceptor");
-const winston_module_1 = require("../modules/winston/winston.module");
-const winston_1 = require("winston");
-const chalk = require("chalk");
 const print_log_interceptor_1 = require("../common/interceptors/print_log.interceptor");
 let SharedModule = class SharedModule {
 };
@@ -63,23 +60,6 @@ SharedModule = __decorate([
             throttler_1.ThrottlerModule.forRoot({
                 ttl: 60,
                 limit: 60,
-            }),
-            winston_module_1.WinstonModule.forRoot({
-                level: 'debug',
-                transports: [
-                    new winston_1.transports.Console({
-                        format: winston_1.format.combine(winston_1.format.colorize(), winston_1.format.printf(({ context, level, message, time }) => {
-                            const appStr = chalk.green(`[NEST]`);
-                            const contextStr = chalk.yellow(`[${context}]`);
-                            return `${appStr} ${time} ${level} ${contextStr} ${message} `;
-                        })),
-                    }),
-                    new winston_1.transports.File({
-                        format: winston_1.format.combine(winston_1.format.timestamp(), winston_1.format.json()),
-                        filename: '111.log',
-                        dirname: 'log',
-                    }),
-                ],
             }),
         ],
         controllers: [],
