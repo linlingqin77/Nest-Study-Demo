@@ -10,10 +10,9 @@ import { AllExceptionsFilter } from 'src/common/filters/all-exception.filter';
 import { ThrottlerModule } from '@nestjs/throttler';
 // 统一返回体
 import { ReponseTransformInterceptor } from 'src/common/interceptors/res_transform.interceptor';
-import { transports, format } from 'winston';
-import * as chalk from 'chalk';
 // 日志收集
 import { PrintLogInterceptor } from 'src/common/interceptors/print_log.interceptor';
+import { JwtAuthGuard } from 'src/common/guards/jwt-auth.guard';
 @Global()
 @Module({
   imports: [
@@ -62,6 +61,11 @@ import { PrintLogInterceptor } from 'src/common/interceptors/print_log.intercept
   controllers: [],
   providers: [
     SharedService,
+    // jwt 校验
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
 
     //全局异常过滤器
     {
