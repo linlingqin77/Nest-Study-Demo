@@ -1,4 +1,6 @@
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+
 @Entity()
 export class User {
   /* 用户Id */
@@ -6,6 +8,7 @@ export class User {
     name: 'user_id',
     comment: '用户ID',
   })
+  @IsNumber()
   userId: number;
 
   /* 用户账号 */
@@ -14,6 +17,7 @@ export class User {
     comment: '用户账号',
     length: 30,
   })
+  @IsString()
   userName: string;
 
   /* 用户昵称 */
@@ -22,6 +26,7 @@ export class User {
     comment: '用户昵称',
     length: 30,
   })
+  @IsString()
   nickName: string;
 
   /* 用户类型 */
@@ -31,6 +36,8 @@ export class User {
     length: 2,
     default: '00',
   })
+  @IsOptional()
+  @IsString()
   userType?: string;
 
   /* 用户邮箱 */
@@ -39,6 +46,8 @@ export class User {
     length: 50,
     default: null,
   })
+  @IsOptional()
+  @IsString()
   email?: string;
 
   /* 手机号码 */
@@ -47,6 +56,8 @@ export class User {
     length: 11,
     default: null,
   })
+  @IsOptional()
+  @IsString()
   phonenumber?: string;
 
   @Column({
@@ -55,6 +66,8 @@ export class User {
     length: 1,
     default: '0',
   })
+  @IsOptional()
+  @IsString()
   sex: string;
 
   /* 头像地址 */
@@ -63,6 +76,8 @@ export class User {
     length: 100,
     default: '',
   })
+  @IsOptional()
+  @IsString()
   avatar?: string;
 
   /* 密码 */
@@ -72,6 +87,7 @@ export class User {
     default: '',
     select: false,
   })
+  @IsString()
   password: string;
 
   @Column({
@@ -89,6 +105,8 @@ export class User {
     length: 1,
     default: '0',
   })
+  @IsString()
+  @IsString()
   status: string;
 
   @Column({
@@ -107,6 +125,8 @@ export class User {
     length: 128,
     default: '',
   })
+  @IsOptional()
+  @IsString()
   loginIp?: string;
 
   /* 最后登录时间 */
@@ -115,5 +135,7 @@ export class User {
     comment: '最后登录时间',
     default: null,
   })
+  @IsOptional()
+  @IsString()
   loginDate?: Date;
 }

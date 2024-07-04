@@ -27,13 +27,13 @@ export class LoginService {
     const payload: Payload = { userId: user.userId, pv: 1 };
     //生成token
     let jwtSign = this.jwtService.sign(payload);
-    //演示环境 复用 token，取消单点登录。
-    if (this.configService.get<boolean>('isDemoEnvironment')) {
-      const token = await this.redis.get(`${USER_TOKEN_KEY}:${user.userId}`);
-      if (token) {
-        jwtSign = token;
-      }
-    }
+    // //演示环境 复用 token，取消单点登录。
+    // if (this.configService.get<boolean>('isDemoEnvironment')) {
+    //   const token = await this.redis.get(`${USER_TOKEN_KEY}:${user.userId}`);
+    //   if (token) {
+    //     jwtSign = token;
+    //   }
+    // }
     //存储密码版本号，防止登录期间 密码被管理员更改后 还能继续登录
     await this.redis.set(`${USER_VERSION_KEY}:${user.userId}`, 1);
     //存储token, 防止重复登录问题，设置token过期时间(1天后 token 自动过期)，以及主动注销token。

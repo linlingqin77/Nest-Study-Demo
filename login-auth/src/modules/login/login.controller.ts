@@ -3,13 +3,13 @@ import { LoginService } from './login.service';
 import { ReqLoginDto } from './dto/req-login.dto';
 import { Public } from 'src/common/decorators/public.decorator';
 import { DataObj } from 'src/common/class/data_obj.class';
-import { AuthGuard } from '@nestjs/passport';
 import { UseGuards } from '@nestjs/common';
+import { LocalAuthGuard } from 'src/common/guards/local-auth.guard';
 @Controller()
 export class LoginController {
   constructor(private readonly loginService: LoginService) {}
   @Public()
-  @UseGuards(AuthGuard('local'))
+  @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@Req() req: Request, @Body() body: ReqLoginDto) {
     return await this.loginService.login(req);
