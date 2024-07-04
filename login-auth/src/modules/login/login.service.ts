@@ -13,11 +13,13 @@ import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 @Injectable()
 export class LoginService {
-  @InjectRedis()
-  private readonly redis: Redis;
-  private readonly sharedService: SharedService;
-  private readonly jwtService: JwtService;
-  private readonly configService: ConfigService;
+  constructor(
+    @InjectRedis()
+    private readonly redis: Redis,
+    private readonly sharedService: SharedService,
+    private readonly jwtService: JwtService,
+    private readonly configService: ConfigService,
+  ) {}
 
   /* 登录 */
   async login(request: Request) {
@@ -61,10 +63,13 @@ export class LoginService {
       width: 115.5,
       height: 38,
     });
+    const svgBuffer = Buffer.from(data).toString('base64');
     const result = {
-      img: data.toString(),
+      img: svgBuffer,
       uuid: this.sharedService.generateUUID(),
     };
+    console.log(text, 'text');
+
     await this.redis.set(
       `${CAPTCHA_IMG_KEY}:${result.uuid}`,
       text,

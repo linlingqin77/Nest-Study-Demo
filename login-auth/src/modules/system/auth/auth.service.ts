@@ -13,10 +13,12 @@ import { isEmpty } from 'lodash';
 
 @Injectable()
 export class AuthService {
-  @InjectRedis()
-  private readonly redis: Redis;
-  private readonly userService: UserService;
-  private readonly sharedService: SharedService;
+  constructor(
+    @InjectRedis()
+    private readonly redis: Redis,
+    private readonly userService: UserService,
+    private readonly sharedService: SharedService,
+  ) {}
 
   // 验证token
   async validateToken(userId: number, pv: number, token: string) {
@@ -35,9 +37,13 @@ export class AuthService {
   async validateUser(username: string, password: string) {
     // 1.根据username查找出用户信息
     const user = await this.userService.findOneByUsername(username);
+
     // 2.与传入的password做比较
     if (!user) throw new ApiException('用户名或密码错误');
     const comparePassword = this.sharedService.md5(password + user.salt);
+    console.log(user.password, 'user');
+    console.log(comparePassword, 'comparePassword');
+
     if (comparePassword !== user.password)
       throw new ApiException('用户名或密码错误');
     return user;
